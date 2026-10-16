@@ -4,8 +4,8 @@
    The chatbot calls your n8n RAG webhook. You set the URL in the "Lab
    configuration" panel on the page, so you never have to edit this file.
 
-     Activity 3   ->  .../webhook/cookbake-course-enquiry       (Simple Vector Store)
-     Activity 3b  ->  .../webhook/cookbake-course-enquiry-rag   (Pinecone)
+     Lab 5        ->  .../webhook/cookbake-course-enquiry       (Simple Vector Store)
+     Optional     ->  .../webhook/cookbake-course-enquiry-rag   (Pinecone)
 
    THE OFFLINE FALLBACK — read this before you trust an answer.
    If the webhook is missing or unreachable, the widget answers from a local
@@ -46,7 +46,7 @@ const WebhookConfig = (() => {
         "Test URL detected. Arm “Listen for test event” in n8n before each message — it accepts one request only.";
       status.className = "config-status is-warn";
     } else if (url.includes("/webhook/")) {
-      status.textContent = "Production URL detected. The workflow must be Active in n8n.";
+      status.textContent = "Production URL detected. The workflow must be Published in n8n.";
       status.className = "config-status is-ok";
     } else {
       status.textContent = "This does not look like an n8n webhook URL.";

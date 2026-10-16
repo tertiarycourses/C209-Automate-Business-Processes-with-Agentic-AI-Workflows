@@ -1,6 +1,6 @@
 /* ============================================================================
    Meridian Asset Management — client relationship chat widget
-   LU2 Activity 2
+   Lab 4 - Client Rapport Assistant (Human in the Loop)
 
    The widget POSTs the client's concern to an n8n Webhook. The workflow runs an
    AI Agent that classifies the concern, reads the emotional tone, raises
@@ -95,7 +95,7 @@ function renderWebhookStatus() {
     webhookStatus.textContent = "Test URL detected. Arm “Listen for test event” in n8n before each message.";
     webhookStatus.className = "config-status is-warn";
   } else if (url.includes("/webhook/")) {
-    webhookStatus.textContent = "Production URL detected. The workflow must be Active in n8n.";
+    webhookStatus.textContent = "Production URL detected. The workflow must be Published in n8n.";
     webhookStatus.className = "config-status is-ok";
   } else {
     webhookStatus.textContent = "This does not look like an n8n webhook URL.";
